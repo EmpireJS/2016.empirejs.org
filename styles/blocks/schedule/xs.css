@@ -2,6 +2,18 @@
   background-color: #fff9ca;
   padding-bottom: 30px;
 
+  a {
+    color: $empire_orange;
+    text-decoration: underline;
+    &:hover {
+      color: #333;
+    }
+
+    &:visited {
+      color: #000;
+    }
+  }
+
   ul, li {
     list-style: none;
     margin: 0;
@@ -41,21 +53,7 @@
       flex-basis: 80%;
       max-width: 600px;
       display: inline-block;
-
-      a {
-        color: $empire_orange;
-        text-decoration: underline;
-      }
-
-        &:hover {
-          color: #333;
-        }
-
-        &:visited {
-          color: #000;
-        }
-
-        }
+    }
 
     .event-schedule-subtitle {
       margin: 0;
@@ -166,5 +164,5 @@
     .event-schedule-list li:last-child:after {
       display: none;
     }
-    }
-    }
+  }
+}
