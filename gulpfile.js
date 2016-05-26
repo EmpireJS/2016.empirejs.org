@@ -19,6 +19,7 @@ var chalk                  = require('chalk'),
     postcssNested          = require('postcss-nested'),
     postcssVars            = require('postcss-simple-vars'),
     sourcemaps             = require('gulp-sourcemaps'),
+    uglify                 = require('gulp-uglify'),
     webpack                = require('webpack-stream')
 
 var env = {
@@ -132,6 +133,7 @@ gulp.task('webpack', function() {
 
   gulp.src([])
   .pipe(webpack(require('./webpack.config')))
+  .pipe(uglify())
   .pipe(gulp.dest('./public/js/'))
 
 })
